@@ -1,0 +1,55 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+main
+    height: 100vh
+    background-color: hsl(233, 47%, 7%)
+    display: flex
+    justify-content: center
+    align-items: center
+    color: hsl(0, 0%, 100%)
+    font-family: 'Outfit', sans-serif
+    text-align: center
+    font-size: 16px
+    .card-container
+        width: 85%
+        background-color: hsl(244, 38%, 16%)
+        border-radius: 10px
+        .img-container
+            margin-bottom: 15px
+            position: relative
+        .img-container::after
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                background-color: hsl(277, 64%, 61%)
+            img
+                display: block
+                width: 100%
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px 
+        h1
+            padding: 20px
+            line-height: 110%
+            span
+                color: hsl(277, 64%, 61%)
+        p
+            color: hsla(0, 0%, 100%, 0.75)
+            line-height: 170%
+            padding: 0 30px
+        .numbers
+            margin-top: 30px
+            div
+                margin: 20px
+            h2
+                font-size: 27px
+            p
+                color: hsla(0, 0%, 100%, 0.6)
+                text-transform: uppercase
+                font-size: 15px
