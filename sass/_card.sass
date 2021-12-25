@@ -1,55 +1,119 @@
-*
-    box-sizing: border-box
-    margin: 0
-    padding: 0
-
-main
-    height: 100vh
-    background-color: hsl(233, 47%, 7%)
-    display: flex
-    justify-content: center
-    align-items: center
-    color: hsl(0, 0%, 100%)
-    font-family: 'Outfit', sans-serif
-    text-align: center
-    font-size: 16px
-    .card-container
-        width: 85%
-        background-color: hsl(244, 38%, 16%)
-        border-radius: 10px
-        .img-container
-            margin-bottom: 15px
-            position: relative
-        .img-container::after
-                content: ''
-                display: block
-                position: absolute
-                top: 0
-                bottom: 0
-                left: 0
-                right: 0
-                background-color: hsl(277, 64%, 61%)
-            img
-                display: block
-                width: 100%
-                border-top-left-radius: 10px
-                border-top-right-radius: 10px 
+.card-container
+    max-width: 1100px
+    background-color: hsl(244, 38%, 16%)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    border-radius: 10px
+    .img-container
+        order: 2
+        position: relative
+        img
+            display: block
+            width: 100%
+            height: auto
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+        .img-cover
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background-color: hsl(277, 64%, 35%)
+            opacity: 0.7
+    .card-text
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin: 70px 100px 60px 70px
         h1
-            padding: 20px
-            line-height: 110%
+            font-size: 37px
+            line-height: 120%
             span
                 color: hsl(277, 64%, 61%)
-        p
-            color: hsla(0, 0%, 100%, 0.75)
-            line-height: 170%
-            padding: 0 30px
+        .main-paragraph
+            font-size: 18px
+            line-height: 160%
+            margin-top: 25px
+            margin-right: 30px
+            color: hsla(0, 0%, 100%, 0.60)
         .numbers
-            margin-top: 30px
-            div
-                margin: 20px
-            h2
-                font-size: 27px
+            display: flex
+            justify-content: space-between
+            font-size: 19px
+            margin-right: 25px
             p
-                color: hsla(0, 0%, 100%, 0.6)
+                font-size: 14px
                 text-transform: uppercase
+                letter-spacing: 1px
+                margin-top: 10px
+                color: hsla(0, 0%, 100%, 0.6)
+
+@media (min-width: 1500px)
+    .card-container
+        max-width: 1400px
+        .card-text
+            margin: 80px 100px 80px 80px
+            .description
+                h1
+                    font-size: 44px
+                .main-paragraph
+                    margin-top: 35px
+                    font-size: 22px
+            .numbers
+                font-size: 22px
+                p
+                    font-size: 17px
+
+@media (max-width: 400px)
+    .card-container
+        margin: 30px
+        .card-text
+            margin: 0 20px 30px 20px
+            h1
+                font-size: 27px
+                margin-top: 35px
+                line-height: 110%
+            .main-paragraph
                 font-size: 15px
+                line-height: 150%
+                margin: 20px 10px
+            .numbers
+                font-size: 16px
+                margin-right: 0
+                p
+                    font-size: 12px
+                    margin-top: 5px
+                div
+                    margin-top: 20px
+
+@media (max-width: 700px)
+    .card-container
+        width: 85%
+        display: flex
+        flex-direction: column-reverse
+        margin: 30px
+        img
+            border-top-right-radius: 10px
+            border-top-left-radius: 10px
+        .card-text
+            margin: 0 40px 30px 40px
+            text-align: center
+            h1
+                font-size: 29px
+                margin-top: 35px
+                line-height: 110%
+            .main-paragraph
+                font-size: 16px
+                line-height: 150%
+                margin: 15px 5px
+            .numbers
+                flex-direction: column
+                font-size: 18px
+                margin-right: 0
+                p
+                    font-size: 13px
+                    margin-top: 5px
+                div
+                    margin-top: 20px
+           
